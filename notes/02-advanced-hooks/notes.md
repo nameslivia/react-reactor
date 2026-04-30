@@ -60,7 +60,7 @@ useEffect(() => {
 
 > cleanup 常用於：清除 timer、取消訂閱、取消 fetch 請求
 
-### 實際範例：Fetch 資料
+### Example：Fetch 資料
 
 ```tsx
 function UserProfile({ userId }: { userId: number }) {
@@ -202,7 +202,7 @@ function Navbar() {
 }
 ```
 
-### 實際範例：全域認證狀態
+### Example：全域認證狀態
 
 ```tsx
 type AuthContextType = {
@@ -315,7 +315,7 @@ const memoizedValue = useMemo(() => {
 ```
 
 ```tsx
-// 實際範例：過濾大量資料
+// Example：過濾大量資料
 function ProductList({ products, keyword }: Props) {
   const filtered = useMemo(() => {
     return products.filter(p =>
@@ -338,7 +338,7 @@ const memoizedFn = useCallback(() => {
 ```
 
 ```tsx
-// 實際範例：傳給子元件的函式，避免子元件不必要的重渲染
+// Example：傳給子元件的函式，避免子元件不必要的重渲染
 function Parent() {
   const [count, setCount] = useState(0)
 
@@ -367,7 +367,7 @@ useCallback → 函式傳給有用 React.memo 包住的子元件
 
 **把重複的 hook 邏輯抽出來，變成自己的 hook**，名稱必須以 `use` 開頭
 
-### 範例一：useFetch
+### Ex1.：useFetch
 
 ```tsx
 function useFetch<T>(url: string) {
@@ -405,7 +405,7 @@ function App() {
 }
 ```
 
-### 範例二：useLocalStorage
+### Ex2.：useLocalStorage
 
 ```tsx
 function useLocalStorage<T>(key: string, initialValue: T) {
@@ -433,7 +433,7 @@ function Settings() {
 }
 ```
 
-### 範例三：useDebounce
+### Ex3.：useDebounce
 
 ```tsx
 function useDebounce<T>(value: T, delay: number): T {
@@ -507,4 +507,4 @@ function Search() {
 
 ---
 
-*上一章：[01 - React Basics](../01-basics/notes.md)　｜　下一章：（待續）*
+*上一章：[01 - React Basics](../01-basics/notes.md)　｜　下一章：[03 - Styling & UI](../03-styling-ui/notes.md)*
